@@ -1,0 +1,179 @@
+{
+  "info": {
+    "_postman_id": "be8007b0-8f14-4cef-ad65-497d852130d0",
+    "name": "Cybersecurity News API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57015072",
+    "_collection_link": "https://go.postman.co/collection/57015072-be8007b0-8f14-4cef-ad65-497d852130d0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01 - Search Cybersecurity",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "02 - Search Ransomware",
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://newsapi.org/v2/everything?q=ransomware&apiKey=06cbac8e24a046bc896e2d18031bdceb&language=en&pageSize=5&sortBy=publishedAt",
+          "protocol": "https",
+          "host": [
+            "newsapi",
+            "org"
+          ],
+          "path": [
+            "v2",
+            "everything"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "ransomware",
+              "type": "text"
+            },
+            {
+              "key": "apiKey",
+              "value": "06cbac8e24a046bc896e2d18031bdceb",
+              "type": "text"
+            },
+            {
+              "key": "language",
+              "value": "en",
+              "type": "text"
+            },
+            {
+              "key": "pageSize",
+              "value": "5",
+              "type": "text"
+            },
+            {
+              "key": "sortBy",
+              "value": "publishedAt",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03 - Ransomware - Page 2",
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://newsapi.org/v2/everything?q=ransomware&apiKey=06cbac8e24a046bc896e2d18031bdceb&language=en&pageSize=5&sortBy=publishedAt",
+          "protocol": "https",
+          "host": [
+            "newsapi",
+            "org"
+          ],
+          "path": [
+            "v2",
+            "everything"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "ransomware",
+              "type": "text"
+            },
+            {
+              "key": "apiKey",
+              "value": "06cbac8e24a046bc896e2d18031bdceb",
+              "type": "text"
+            },
+            {
+              "key": "language",
+              "value": "en",
+              "type": "text"
+            },
+            {
+              "key": "pageSize",
+              "value": "5",
+              "type": "text"
+            },
+            {
+              "key": "sortBy",
+              "value": "publishedAt",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04 - Invalid API Key",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "05 - Missing Search Query",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "news_api_key",
+      "value": ""
+    }
+  ]
+}
